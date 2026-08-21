@@ -17,44 +17,6 @@
 
 This uses **polling**, not webhooks — no public URL or open port needed.
 
-## Hosting options
-
-### Just your laptop (good enough to start)
-Run `python bot.py` in a terminal, or from VS Code's built-in terminal/debugger.
-Zero setup cost, but the bot only works while that process is running — close the
-laptop lid or lose wifi and it's offline. Fine for solo use/testing. On Windows,
-`pythonw bot.py` avoids a console window; on any OS, running it inside `tmux`/`screen`
-(Linux/Mac) or just leaving the terminal open is enough.
-
-### Replit
-Works, with two caveats:
-- Free Repls sleep after inactivity — pinging isn't needed for a *polling* bot
-  since there's no incoming webhook, but the process itself gets killed when the
-  container spins down, so the bot goes offline until you reopen it. Replit's
-  "Always On" (paid) or their Deployments feature keeps it running continuously.
-- Store `BOT_TOKEN` in Replit's **Secrets** tab, not in code.
-
-Good for "spin it up in five minutes from a browser," not for guaranteed uptime.
-
-### A free-tier cloud box (still temporary/light, but more stable than a laptop)
-- **Railway** / **Render** / **Fly.io** — all have small free or very cheap tiers,
-  deploy straight from a GitHub repo, keep the process running 24/7 without your
-  laptop needing to be on. This is the natural next step once your laptop-based
-  version works and you want it always available.
-- **PythonAnywhere** — free tier can run "always-on tasks" (paid) or scheduled
-  tasks; a bit more manual but works for small always-on Python scripts.
-
-### A real VPS (cheap, once you outgrow "temporary")
-Any $5/mo box (DigitalOcean, Hetzner, a spare Raspberry Pi at home, etc.) — install
-Python, `pip install -r requirements.txt`, run under `systemd` or inside `screen`/`tmux`
-so it survives SSH disconnects and reboots. Most durable option, minimal cost, full
-control — the natural home for this once it's more than just-you-testing-it.
-
-### What you don't need
-Because this bot uses polling (not a webhook), you don't need HTTPS, a domain, or
-an open inbound port anywhere — that's what makes laptop/Replit hosting viable at
-all. Webhooks only become worth it at higher message volume (many concurrent users),
-which isn't your case.
 
 ## Notes
 - `fstik.db` (SQLite) tracks which packs belong to which user locally (plus
