@@ -15,8 +15,7 @@
    ```
 5. In Telegram: `/newpack` → send title → send image/GIF/video → pick emoji → Done.
 
-This uses **polling**, not webhooks — no public URL or open port needed. That's why
-"host it on my laptop" works fine for personal use.
+This uses **polling**, not webhooks — no public URL or open port needed.
 
 ## Hosting options
 
