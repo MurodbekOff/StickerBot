@@ -1,6 +1,6 @@
 # fstik-style sticker pack bot
 
-This is my weekend project that I mainly did with Claude. I do not understand even 1/10 of this whole project so there might be really awful mistakes. Let me know if there are any and how to fix them. Aiming to expand it to have a lot more useful functions like converting file types, downloading short-style videos from instagram and tiktok.
+This is my weekend project and everything is done by Claude. I do not understand even 1/10 of this whole project so there might be really awful mistakes. Let me know if there are any and how to fix them. Aiming to expand it to have a lot more useful functions like converting file types, downloading short-style videos from instagram and tiktok.
 
 ## Setup
 
