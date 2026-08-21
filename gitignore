@@ -1,0 +1,5 @@
+.env
+fstik.db
+__pycache__/
+*.pyc
+.venv/
