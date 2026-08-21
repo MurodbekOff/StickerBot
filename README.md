@@ -68,6 +68,3 @@ This uses **polling**, not webhooks — no public URL or open port needed.
   is currently adding to it. "🔄 Reset link" invalidates the old link (anyone who
   already has the new one keeps their access; this only stops the *old* link from
   granting access to someone new).
-- **Link downloader**: paste any `instagram.com` or `tiktok.com` link in the chat —
-  no command needed, and it works even mid-editing-session. `/caption on` / `off`
-  toggles whether downloaded videos get a `⬇️ via @yourbot` caption.
